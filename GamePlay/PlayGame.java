@@ -9,6 +9,7 @@ public class PlayGame {
 	static boolean turnCheck = true; // Bool value to ensure the player has made a move before switching to the other player's turn. 
 	private static int dmg; 
 	private static Random generator = new Random(); 
+	private static int round = 1; // Keeps tract of the number of rounds. 
 	
 	public static void main(String[] args) {
 		// Create two players. 
@@ -19,7 +20,10 @@ public class PlayGame {
 		Player other = player2; 
 		// While loop to create the textual interface of the game. 
 		while (true){
+			System.out.println("======== ROUND " + round + " ========"); 
 			System.out.println(currPlayer.getName() + " it is your turn."); 
+			System.out.println("Your health: " + currPlayer.getHealth()); 
+			System.out.println("Opponent health: " + other.getHealth()); 
 			Scanner scan = new Scanner(System.in); // Scanner to read input. 
 			System.out.println("Choose a move by typing an option from the list below: (Type 0 to quit)"); 
 			System.out.println("Attack | Heal | Pass");
@@ -28,9 +32,7 @@ public class PlayGame {
 				// Generate a random number to be applied as damage. 
 				dmg = generator.nextInt(currPlayer.getMaxDmg()) + 1; 
 				System.out.println("You dealt " + dmg +" damage to " + other.getName() ); 
-				other.dmgDealt(dmg); // Apply the damage. 
-				System.out.println("Your current health is: " + currPlayer.getHealth()); 
-				System.out.println(other.getName() + "'s current health is: " + other.getHealth()); 
+				other.dmgDealt(dmg); // Apply the damage.
 				turnCheck = true; // Allow switch to other player's turn. 
 			} else if ("Heal".equals(choice) || "heal".equals(choice)){
 				System.out.println("Choose what to heal with: (Type 0 to quit)"); 
@@ -73,6 +75,7 @@ public class PlayGame {
 				currPlayer = player1; 
 				other = player2; 
 			}
+			round++; 
 		} // End While loop. 
 	} // End main. 
 } // End class playGame. 
