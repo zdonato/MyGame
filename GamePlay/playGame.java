@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner; 
 
 // A class to play the game. 
-public class playGame {
+public class PlayGame {
 	static boolean turnCheck = true; // Bool value to ensure the player has made a move before switching to the other player's turn. 
 	private static int dmg; 
 	private static Random generator = new Random(); 
