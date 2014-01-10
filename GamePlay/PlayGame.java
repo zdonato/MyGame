@@ -10,11 +10,12 @@ public class PlayGame {
 	private static int dmg; 
 	private static Random generator = new Random(); 
 	private static int round = 1; // Keeps tract of the number of rounds. 
+	private static int pre; // Variable to use to determine how much was healed. 
 	
 	public static void main(String[] args) {
 		// Create two players. 
-		Player player1 = new Player(100, "player1", 1000); 
-		Player player2 = new Player(100, "player2", 1000);
+		Player player1 = new Player(500, "player1", 1000); 
+		Player player2 = new Player(500, "player2", 1000);
 		// Variables to keep tract of who deals and receives damage. 
 		Player currPlayer = player1; 
 		Player other = player2; 
@@ -46,9 +47,9 @@ public class PlayGame {
 					System.out.println("Taking you back to the main menu... "); 
 					turnCheck = false; // Go back to the main menu without switching turns. 
 				} else {
+					pre = currPlayer.getHealth(); 
 					currPlayer.heal(foodChoice); // Heal the player based on choice. The heal method will check for invalid inputs. 
-					System.out.println("Your current health is: " + currPlayer.getHealth()); 
-					System.out.println(other.getName() + "'s current health is: " + other.getHealth()); 
+					System.out.println("You healed yourself for: " + (currPlayer.getHealth() - pre) ); 
 					turnCheck = true; // Allow for turn switch. 
 				}
 			} else if ("0".equals(choice)){
