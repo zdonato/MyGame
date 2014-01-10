@@ -73,6 +73,6 @@ public class PlayGame {
 				currPlayer = player1; 
 				other = player2; 
 			}
-		}
+		} // End While loop. 
 	} // End main. 
 } // End class playGame. 
