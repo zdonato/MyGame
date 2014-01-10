@@ -1,4 +1,4 @@
-// Developer: player1ary Donato
+// Developer: Zachary Donato
 // Date: 1.8.14
 
 import java.util.Random; 
