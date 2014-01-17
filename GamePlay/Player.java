@@ -1,7 +1,5 @@
 // Developer: Zachary Donato 
 // Date: 1.8.13 
-import java.util.Random;  
-import java.util.Scanner; 
 
 // A class to create a player. 
 public class Player{
