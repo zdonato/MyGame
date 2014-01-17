@@ -1,8 +1,8 @@
 // Developer: Zachary Donato
 // Date: 1.8.14
 
-import java.util.Random; 
-import java.util.Scanner; 
+import java.util.Random;
+import java.util.Scanner;
 
 // A class to play the game. 
 public class PlayGame {
@@ -10,8 +10,8 @@ public class PlayGame {
 	private static int dmg; 
 	private static Random generator = new Random(); 
 	private static int round = 1; // Keeps tract of the number of rounds. 
-	private static int pre; // Variable to use to determine how much was healed. 
-	
+	private static int pre; // Variable to use to determine how much was healed.  
+
 	public static void main(String[] args) {
 		// Create two players. 
 		Player player1 = new Player(500, "player1", 1000); 
@@ -19,6 +19,7 @@ public class PlayGame {
 		// Variables to keep tract of who deals and receives damage. 
 		Player currPlayer = player1; 
 		Player other = player2; 
+		
 		// While loop to create the textual interface of the game. 
 		while (true){
 			System.out.println("======== ROUND " + round + " ========"); 

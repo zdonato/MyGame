@@ -16,6 +16,7 @@ public class Player{
 	private int numL = 5; 
 	private int numShark = 2; 
 	private int numShrimp = 10; 
+	private boolean itemCheck = false; 
 	
 	// Constructor. 
 	public Player(int md, String n, int h){
@@ -78,4 +79,6 @@ public class Player{
 	public int getMaxDmg(){
 		return maxDmg; 
 	} // End getMaxDmg. 
+	
+	
 }
