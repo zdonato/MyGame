@@ -7,7 +7,7 @@ public class Player{
 	private int maxDmg; 
 	private String name; 
 	private int health; 
-	// The available foods. Attempted to use TreeMap, but method heal malfcuntioned. 
+	// The available foods. Attempted to use TreeMap, but method heal malfunctioned. 
 	// Reminder to try that again at a later time. 
 	private int lobster = 200; 
 	private int shark = 500; 
@@ -15,8 +15,7 @@ public class Player{
 	// Variables to keep count of the available supplies during a session. 
 	private int numL = 5; 
 	private int numShark = 2; 
-	private int numShrimp = 10; 
-	private boolean itemCheck = false; 
+	private int numShrimp = 10;  
 	
 	// Constructor. 
 	public Player(int md, String n, int h){
